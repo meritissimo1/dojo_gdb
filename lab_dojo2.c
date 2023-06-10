@@ -1,23 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <readline/readline.h>
+#include <string.h>
 #include <time.h>
 
 
-char* rand_string() {
-    static const char chars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    int size = rand() % 10 + 10;  
-    char* string = (char*)malloc((size + 1) * sizeof(char));
-    int i;
+int	pegadinha()
+{
+	printf("pegadinha garai\n");
+	return (0);
+}
 
-    for (i = 0; i < size; i++) {
-        int index = rand() % (sizeof(chars) - 1); 
-        string[i] = chars[index];  
-    }
+char	*rand_string(int i)
+{
+	char *string;
 
-    string[size] = '\0';  
-
-    return string;
+	string = strdup("la ele");
+	return string;
 }
 
 
@@ -40,7 +39,7 @@ int	main( void )
 	char 	*input;
 
 	input = readline("minihell - $> ");
-	while (ft_strncmp(input, rand_string(), strlen(rand_string())))
+	while (ft_strncmp(input, rand_string(pegadinha()), strlen(rand_string(0))))
 	{
 		printf("Fail\n");
 		input = readline("$> ");
