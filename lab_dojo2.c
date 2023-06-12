@@ -5,10 +5,21 @@
 #include <time.h>
 
 
-int	pegadinha()
+int outra_pegadinha(int i)
+{
+	printf("entre aqui");
+	return(i);
+}
+
+int	pegadinha(int i)
 {
 	printf("pegadinha garai\n");
 	return (0);
+}
+
+char	*agr_vai(char *edu)
+{
+	return (edu);
 }
 
 char	*rand_string(int i)
@@ -39,7 +50,7 @@ int	main( void )
 	char 	*input;
 
 	input = readline("minihell - $> ");
-	while (ft_strncmp(input, rand_string(pegadinha()), strlen(rand_string(0))))
+	while (ft_strncmp(input, agr_vai(rand_string(pegadinha(42))), strlen(rand_string(0))))
 	{
 		printf("Fail\n");
 		input = readline("$> ");
