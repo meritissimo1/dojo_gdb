@@ -18,7 +18,7 @@ int	pegadinha(int i)
 	return (0);
 }
 
-char	*rand_string(int i)
+void	*rand_string(int i)
 {
 	char *string;
 
@@ -29,10 +29,12 @@ char	*rand_string(int i)
 int	main( void )
 {
 	char 	*input;
-
+	void	*result;
+	
+	result = rand_string(pegadinha(42));
 	ft_printf("$> ");
 	input = get_next_line(0);
-	while (ft_strncmp(input, rand_string(pegadinha(42)), ft_strlen(rand_string(0))))
+	while (ft_strncmp(input, result, ft_strlen(result)))
 	{
 		ft_print("Fail");
 		ft_printf("$> ");
