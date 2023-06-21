@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 15:51:37 by coder             #+#    #+#             */
-/*   Updated: 2022/09/14 19:22:51 by coder            ###   ########.fr       */
+/*   Updated: 2023/06/21 07:27:25 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,19 @@
 # include <stdlib.h>
 # include <unistd.h>
 # define MAX_SIZE 2147483647
+# include "linked_list.h"
 
-typedef struct s_list
+typedef struct s_mini
 {
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+	char *string;
+}t_mini;
+
+
+typedef struct s_shell
+{
+	t_list	*list;
+}t_shell;
+
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -64,4 +71,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+//void	*rand_string(int i);
+//int		pegadinha();
+int		ft_strncmplist(const char *s1, const t_list *list, size_t n);
 #endif

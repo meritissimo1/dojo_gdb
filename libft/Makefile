@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 15:51:38 by coder             #+#    #+#              #
-#    Updated: 2022/11/13 08:08:06 by etachott         ###   ########.fr        #
+#    Updated: 2023/06/21 06:23:44 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ LIBSRCS = $(addprefix $(PATH_LIBSRCS)/, ft_atoi.c \
 	   ft_strtrim.c    \
 	   ft_substr.c     \
 	   ft_tolower.c    \
-	   ft_toupper.c)
+	   ft_toupper.c   \
+	   rand_string.c)
 
 GNLSRCS = $(addprefix $(PATH_GNLSRCS)/, get_next_line.c \
 	   get_next_line_utils.c)
@@ -85,7 +86,7 @@ LLOBJS = $(LLSRCS:$(PATH_LLSRCS)/%.c=$(PATH_OBJS)/%.o)
 all: $(NAME)
 
 $(NAME): $(LIBOBJS) $(GNLOBJS) $(FT_PRINTFOBJS) $(LLOBJS)
-	ar rcs $(NAME) $(LIBOBJS) $(GNLOBJS) $(FT_PRINTFOBJS)
+	ar rcs $(NAME) $(LIBOBJS) $(GNLOBJS) $(LLOBJS) $(FT_PRINTFOBJS)
 
 $(LIBOBJS): $(LIBSRCS)
 	$(CC) $(CCFLAGS) -I $(PATH_INCL)/ -c $(LIBSRCS)

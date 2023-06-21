@@ -1,54 +1,29 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <readline/readline.h>
-#include <time.h>
+#include "libft/includes/get_next_line.h"
+#include "libft/includes/libft.h"
+#include "libft/includes/ft_printf.h"
+#include "rand.h"
 
-
-char* rand_string() {
-    static const char chars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    int size = rand() % 10 + 1;  
-    char* string = (char*)malloc((size + 1) * sizeof(char));
-    int i;
-
-    for (i = 0; i < size; i++) {
-        int index = rand() % (sizeof(chars) - 1); 
-        string[i] = chars[index];  
-    }
-
-    string[size] = '\0';  
-
-    return string;
-}
-
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t	current;
-
-	current = 0;
-	while ((s1[current] || s2[current]) && current < n)
-	{
-		if (s1[current] != s2[current])
-			return ((unsigned char)s1[current] - (unsigned char)s2[current]);
-		current++;
-	}
-	return (0);
-}
-
-int	main( void )
+int	main(int ac, char **av)
 {
 	char 	*input;
 	size_t	len;
 
-	char *result = rand_string();
-	input = readline("minihell - $> ");
-	len = strlen(input);
-	while (ft_strncmp(input, result, len))
+	if (ac - 1 == 3)
 	{
-		printf("Fail\n");
-		input = readline("$> ");
+		char *result = rand_string(42);
+		ft_print("$> ");
+		input = get_next_line(0);	
+		len = ft_strlen(input);
+		while (ft_strncmp(input, result, len - 1))
+		{
+			ft_printf("Fail\n");
+			ft_print("$> ");
+			input = get_next_line(0);
+		}
+		ft_printf("Boua!\n");
+		free(result);
 	}
-	printf("Boua!\n");
-
-	free(result);
+	else
+		return (0);
+		
 }

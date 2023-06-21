@@ -5,25 +5,12 @@
 #include "libft/includes/get_next_line.h"
 #include "libft/includes/libft.h"
 #include "libft/includes/ft_printf.h"
-
-int outra_pegadinha(int i)
-{
-	ft_print("entre aqui");
-	return(i);
-}
+#include "rand.h"
 
 int	pegadinha(int i)
 {
-	ft_print("pegadinha garai");
+	ft_print("pegadinha");
 	return (0);
-}
-
-char	*rand_string(int i)
-{
-	char *string;
-
-	string = ft_strdup("la ele");
-	return string;
 }
 
 int	main( void )

@@ -1,8 +1,8 @@
-NAME = debug
+NAME = trick
 
-SRCS = lab_dojo4.c
+SRCS = lab_dojo2.c rand.c
 
-OBJS = lab_dojo2.o
+OBJS = $(SRCS:%.c=%.o)
 
 LIBFT = ./libft/libft.a
 
