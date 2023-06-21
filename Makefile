@@ -1,6 +1,6 @@
-NAME = trick
+NAME = jujubs
 
-SRCS = lab_dojo2.c rand.c
+SRCS = lab_dojo3.c
 
 OBJS = $(SRCS:%.c=%.o)
 
@@ -9,13 +9,13 @@ LIBFT = ./libft/libft.a
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJS)
-	clang $(OBJS) $(LIBFT) -o $(NAME)
+	clang $(OBJS) src/rand3.o $(LIBFT) -o $(NAME)
 
 $(LIBFT):
 	make -C libft
 
 $(OBJS): $(SRCS)
-	clang -g3 -c $< -o $@
+	clang -g3 -c src/rand3.c $< -o $@
 
 clean:
 	@make -C libft clean

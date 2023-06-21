@@ -5,7 +5,7 @@
 #include "libft/includes/get_next_line.h"
 #include "libft/includes/libft.h"
 #include "libft/includes/ft_printf.h"
-#include "rand.h"
+#include "src/rand.h"
 
 int	pegadinha(int i)
 {
