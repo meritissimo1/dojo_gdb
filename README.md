@@ -25,5 +25,5 @@ Temos um problema com o Ctrl-D. Consegue consertar?
 	`clang -g3 <arquivo>.c`
 
 - Compilar um desafio: <br>
-	`make -C libft`
+	`make -C libft` <br>
   	`clang -g3 <desafio>.c src/rand<numero do desafio>.c libft/libft.a`
