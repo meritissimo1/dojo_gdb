@@ -23,3 +23,7 @@ Temos um problema com o Ctrl-D. Consegue consertar?
 
 - Compilação com símbolos de debug (útil para o Valgrind): <br>
 	`clang -g3 <arquivo>.c`
+
+- Compilar um desafio: <br>
+	`make -C libft`
+  	`clang -g3 <desafio>.c src/rand<numero do desafio>.c libft/libft.a`
