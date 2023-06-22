@@ -6,7 +6,7 @@ Esse dojo funcionará em duas partes: <br>
 
 	A senha para o primeiro desafio é `gdb`.
 
-2. Esses executáveis estão vazando memória! Usem o Valgrind para achar e consertar todos os leaks dos programas.
+2. Alguns executáveis estão vazando memória! Usem o Valgrind para achar e consertar todos os leaks dos programas.
 
 ## Bônus
 Temos um problema com o Ctrl-D. Consegue consertar?
