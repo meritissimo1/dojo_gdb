@@ -32,9 +32,7 @@ Temos um problema com o Ctrl-D. Consegue consertar?
 
 Bonus Part 
 
-Acabou de acontecer mais um dojo aqui na faculdade onde eu estudo, a 42 São Paulo e mais uma vez o tema escolhido foi GDB, nosso fiel companheiro GNU Debugger. Esse artigo é uma continuação do evento, mas também pode ser pra aqueles que estão envolvidos com o desenvolvimento de embarcados, pra quem curte um baixo nível, ou pra quem fez o clone do meu repositório [CTF de GDB](https://github.com/meritissimo1/dojo_gdb), fez os desafios proposto e se interessou mais pela ferramenta.
-
-Nesse post eu vou mostrar como a gente pode usar o [GDB](https://www.sourceware.org/gdb/) e o [Valgrind](https://valgrind.org/) juntos, usando o [vgdb](https://valgrind.org/docs/manual/manual-core-adv.html#manual-core-adv.vgdb) um programa que serve como intermediário entre o Valgrind e o GDB, com o objetivo de encontrar erros no código com mais facilidade e precisão.
+Nesse bonus part eu vou mostrar como a gente pode usar o [GDB](https://www.sourceware.org/gdb/) e o [Valgrind](https://valgrind.org/) juntos, usando o [vgdb](https://valgrind.org/docs/manual/manual-core-adv.html#manual-core-adv.vgdb) um programa que serve como intermediário entre o Valgrind e o GDB, com o objetivo de encontrar erros no código com mais facilidade e precisão.
 
 Pra exemplificar, eu trouxe um código em C que possui um erro simples de condicional jump por um ponteiro não inicializado:
 
