@@ -30,7 +30,7 @@ Temos um problema com o Ctrl-D. Consegue consertar?
 
 
 
-Bonus Part 
+# Bonus Content 
 
 Nesse bonus part eu vou mostrar como a gente pode usar o [GDB](https://www.sourceware.org/gdb/) e o [Valgrind](https://valgrind.org/) juntos, usando o [vgdb](https://valgrind.org/docs/manual/manual-core-adv.html#manual-core-adv.vgdb) um programa que serve como intermediário entre o Valgrind e o GDB, com o objetivo de encontrar erros no código com mais facilidade e precisão.
 
