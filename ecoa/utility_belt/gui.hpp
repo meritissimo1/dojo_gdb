@@ -6,5 +6,4 @@
 
 std::string rand_str(std::string flag);
 
-
-#endif 
+#endif
